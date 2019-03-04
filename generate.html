@@ -2,10 +2,10 @@
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%;">
-      <pre id='code'></pre>
+      <pre class="code" id="code"></pre>
     </td>
     <td style="width: 50%; vertical-align: top;">
-      <pre id='test'></pre>
+      <pre class="code" id="tests"></pre>
     </td>
   </tr>
 </table>
@@ -13,5 +13,5 @@
 const enabledTypes = Object.entries(typeDefs).map(([pascal]) => pascal)
 const { code, tests } = generate(enabledTypes)
 document.querySelector('#code').innerText = code
-document.querySelector('#test').innerText = tests
+document.querySelector('#tests').innerText = tests
 </script>
