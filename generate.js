@@ -386,7 +386,8 @@ const generate = (enabledTypes) => {
     `)).join('')}
     }
     `.trim()
-    tests = tests.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n')
-    code = code.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n')
-    return {code, tests}
+    return {
+        code: code.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n'),
+        tests: tests.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n')
+    }
 }
