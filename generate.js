@@ -288,7 +288,7 @@ const generate = (enabledTypes) => {
     `).join('')}
     `).join('')}
     }
-    `.trim()
+    `
 
     const tests = `
     /* Code generated at https://codepen.io/alancnet/pen/MxYaWE */
@@ -385,7 +385,7 @@ const generate = (enabledTypes) => {
         private class Test${pascal}To${other} implements X.${pascal}To${other} { public ${other} apply(${pascal} value) { return ${otherLiteral}; }}
     `)).join('')}
     }
-    `.trim()
+    `
     return {
         code: code.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n'),
         tests: tests.split('\n').map(x => x.substr(4).trimEnd()).filter(x => x).join('\n')
