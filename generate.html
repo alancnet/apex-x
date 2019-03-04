@@ -10,7 +10,7 @@
   </tr>
 </table>
 <script type="text/javascript">
-const enabledTypes = typeDefs.map(([pascal]) => pascal)
+const enabledTypes = Object.entries(typeDefs).map(([pascal]) => pascal)
 const { code, tests } = generate(enabledTypes)
 document.querySelector('#code').innerText = code
 document.querySelector('#test').innerText = tests
