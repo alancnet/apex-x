@@ -1,7 +1,8 @@
 pre.code {
   user-select: all;
   height: 150px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 pre.code::before {
@@ -12,5 +13,10 @@ pre.code::before {
   position: absolute;
   top: 0;
   left: 0;
-  background:linear-gradient(transparent 100px, white);
+  background:linear-gradient(transparent 120px, #f3f6fa);
+  filter: opacity(100%);
+  transition: filter 500ms ease-out;
+}
+pre.code:hover::before {
+  filter: opacity(0%);
 }
