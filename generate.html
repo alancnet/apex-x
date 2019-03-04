@@ -1,14 +1,6 @@
 <script type="text/javascript" src="generate.js"></script>
-<table style="width: 100%;">
-  <tr>
-    <td style="width: 50%;">
-      <pre class="code" id="code"></pre>
-    </td>
-    <td style="width: 50%; vertical-align: top;">
-      <pre class="code" id="tests"></pre>
-    </td>
-  </tr>
-</table>
+<pre class="code" id="code"></pre>
+<pre class="code" id="tests"></pre>
 <script type="text/javascript">
 const enabledTypes = Object.entries(typeDefs).map(([pascal]) => pascal)
 const { code, tests } = generate(enabledTypes)
