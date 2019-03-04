@@ -1,0 +1,17 @@
+<script type="text/javascript" src="generate.js"></script>
+<table style="width: 100%;">
+  <tr>
+    <td style="width: 50%;">
+      <pre id='code'></pre>
+    </td>
+    <td style="width: 50%; vertical-align: top;">
+      <pre id='test'></pre>
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+const enabledTypes = typeDefs.map(([pascal]) => pascal)
+const { code, tests } = generate(enabledTypes)
+document.querySelector('#code').innerText = code
+document.querySelector('#test').innerText = tests
+</script>
