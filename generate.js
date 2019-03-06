@@ -18,7 +18,7 @@ const generate = (enabledTypes) => {
     .map(([pascal, props]) => Object.assign(props, {pascal}))
 
     const code = `
-    /* Code generated at https://codepen.io/alancnet/pen/WmwXEq */
+    /* Code generated at https://alancnet.github.io/apex-x/ */
     public class X {
     ${types.map(({pascal}) => `
         public class ${pascal}Iterator implements Iterator<${pascal}> {
@@ -291,7 +291,7 @@ const generate = (enabledTypes) => {
     `
 
     const tests = `
-    /* Code generated at https://codepen.io/alancnet/pen/MxYaWE */
+    /* Code generated at https://alancnet.github.io/apex-x/ */
     @IsTest
     public class X_Tests {
 
