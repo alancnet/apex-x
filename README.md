@@ -4,6 +4,10 @@ X is a generic(ish) fluent collection library for Apex. Simple list comprehensio
 
 {% include_relative generate.html %}
 
+### Installation
+
+Create classes `X` and `X_Tests`, and copy the code in.
+
 ### Usage
 
 ```apex
