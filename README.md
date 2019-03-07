@@ -62,6 +62,3 @@ For X.OfSObject, and Type is a primitive (String, Integer, etc.)
 .toMapByType(String|SObjectField field):Map<Type, SObject>
 ```
 
-
-
-```
