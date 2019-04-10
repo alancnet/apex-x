@@ -40,6 +40,8 @@ For X where X.Of<Type>:
 
 .add(Value value):void                          # Append value to X.
 .addAll(X|List<Type>|Set<Type> other):void      # Appends values to X.
+.remove(Value value):void                       # Removed any matching value from X.
+.without(Value value):X                         # Returns a new X without any matching value.
 .get(Integer index):Value                       # Returns value at index, or null if out of range.
 .slice(Integer begin[, Integer end]):X          # Returns subset of X.
 .size():Integer                                 # Returns size of collection.
@@ -60,5 +62,9 @@ For X.OfSObject, and Type is a primitive (String, Integer, etc.)
 .groupByType(String|SObjectField field):Map<Type, SObject[]>
 .toMap(TypeSelector selector):Map<Type, SObject>
 .toMapByType(String|SObjectField field):Map<Type, SObject>
+.havingType(String|SObjectField field):XType                 # Filter where field isn't null
+.havingType(String|SObjectField field, Type value):XType     # Filter based on field matching
+.notHavingType(String|SObjectField field):XType              # Filter where field is null
+.notHavingType(String|SObjectField field, Type value):XType  # Filter based on field not matching
 ```
 
